@@ -12,7 +12,7 @@ def get_db_connection():
         password="rootpassword",
         database="isyrent_db"
     )
-
+# test app.py
 @app.route("/users", methods=["GET"])
 def get_users():
     try:
