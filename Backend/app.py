@@ -13,6 +13,7 @@ def get_db_connection():
         database="isyrent_db"
     )
 # test app.py
+# test branch 
 @app.route("/users", methods=["GET"])
 def get_users():
     try:
