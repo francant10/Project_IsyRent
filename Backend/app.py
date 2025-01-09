@@ -14,12 +14,12 @@ def get_db_connection():
     )
 # test app.py
 # test branch 
-@app.route("/users", methods=["GET"])
+@app.route("/mezzo", methods=["GET"])
 def get_users():
     try:
         conn = get_db_connection()
         cursor = conn.cursor(dictionary=True)
-        cursor.execute("SELECT * FROM mezzo")
+        cursor.execute("SELECT modello,costo,tipo_mezzo FROM mezzo")
         users = cursor.fetchall()
         cursor.close()
         conn.close()

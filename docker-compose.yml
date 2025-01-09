@@ -1,13 +1,14 @@
 version: '3'
 services:
-  frontend:
+  db:
     build:
-      context: ./Frontend
-    container_name: frontend
+      context: ./Database
+    container_name: db
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpassword
+      MYSQL_DATABASE: isyrent_db
     ports:
-      - "3000:80"
-    depends_on:
-      - backend
+      - "3306:3306"
 
   backend:
     build:
@@ -20,12 +21,11 @@ services:
     depends_on:
       - db
 
-  db:
+  frontend:
     build:
-      context: ./Database
-    container_name: db
-    environment:
-      MYSQL_ROOT_PASSWORD: rootpassword
-      MYSQL_DATABASE: isyrent_db
+      context: ./Frontend
+    container_name: frontend
     ports:
-      - "3306:3306"
+      - "3000:80"
+    depends_on:
+      - backend
