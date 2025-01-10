@@ -13,7 +13,7 @@ def get_db_connection():
         database="isyrent_db"
     )
 # test app.py
-# test branch 
+# test branch 3
 @app.route("/mezzo", methods=["GET"])
 def get_users():
     try:
@@ -29,3 +29,4 @@ def get_users():
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000)
+
