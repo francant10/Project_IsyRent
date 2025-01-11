@@ -18,6 +18,7 @@ services:
       - "5000:5000"
     environment:
       - DATABASE_URL=mysql://root:rootpassword@db/isyrent_db
+      - ./database/init.sql:/docker-entrypoint-initdb.d/init.sql
     depends_on:
       - db
 

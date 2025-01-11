@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seleziona il Mezzo</title>
+</head>
+<body>
+    <div id="filtro">
+        <h2>Trova il mezzo perfetto per il tuo viaggio</h2>
+        <label for="tipo-mezzo">Tipo di mezzo:</label>
+        <select id="tipo-mezzo">
+            <option value="" disabled selected>Seleziona un tipo</option>
+            <option value="scooters">Scooters</option>
+            <option value="cars">Cars</option>
+            <option value="motorcycles">Motorcycles</option>
+            <option value="bicycles">Bicycles</option>
+            <option value="campers">Campers</option>
+            <option value="boats">Boats</option>
+        </select>
+        
+
+        <label for="data-ritiro">Data e ora di ritiro:</label>
+        <input type="datetime-local" id="data-ritiro">
+
+        <label for="data-consegna">Data e ora di consegna:</label>
+        <input type="datetime-local" id="data-consegna">
+
+        <button id="cerca">Cerca</button>
+    </div>
+
+    <div id="risultati">
+        <h2>Mezzi Disponibili</h2>
+        <div id="mezzo-list"></div>
+    </div>
+
+    <script src="../javascript/start_page.js"></script>
+</body>
+</html>
